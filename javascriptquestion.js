@@ -10,6 +10,9 @@ function q1ans() {
     setTimeout(() => {
         let num1 = document.getElementById('q1num1').value;
         let num2 = document.getElementById('q1num2').value;
+        if(num1 == '' || num2 == ''){
+            return;
+        }
         let ans = Number(num1) + Number(num2);
         document.getElementById('q1ans').value = ans;
     }, 1);
@@ -18,6 +21,9 @@ function q2ans() {
     setTimeout(() => {
         let num1 = document.getElementById('q2num1').value;
         let num2 = document.getElementById('q2num2').value;
+        if(num1 == '' || num2 == ''){
+            return;
+        }
         let ans = Number(num1) > Number(num2) ? num1 : num2;
         document.getElementById('q2ans').value = ans;
     }, 1);
@@ -78,6 +84,11 @@ function q5ans() {
         let reversename = '';
         for (let i = (name.length) - 1; i >= 0; i--) {
             reversename += name[i];
+        }
+        if (name == '') {
+            document.getElementById('q5ansyes').checked = false;
+            document.getElementById('q5ansno').checked = false;
+            return;
         }
         document.getElementById('q5ans').value = reversename;
         if (name == reversename) {
