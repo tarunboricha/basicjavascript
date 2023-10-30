@@ -125,5 +125,6 @@ function q7ans() {
     }, 1000);
     setTimeout(() => {
         clearInterval(myInterval);
+        document.getElementById('q7ans').innerText = '';
     }, 10000);
 }
