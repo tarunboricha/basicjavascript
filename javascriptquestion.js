@@ -88,6 +88,7 @@ function q5ans() {
         if (name == '') {
             document.getElementById('q5ansyes').checked = false;
             document.getElementById('q5ansno').checked = false;
+            document.getElementById('q5ans').value = '';
             return;
         }
         document.getElementById('q5ans').value = reversename;
