@@ -23,6 +23,7 @@ function q2ans() {
         let num1 = document.getElementById('q2num1').value;
         let num2 = document.getElementById('q2num2').value;
         if(num1 == '' || num2 == ''){
+            document.getElementById('q2ans').value = '';
             return;
         }
         let ans = Number(num1) > Number(num2) ? num1 : num2;
