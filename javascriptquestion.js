@@ -120,7 +120,10 @@ function q7ans() {
         document.getElementById('q7ans').innerText = ans;
     }
     getTime();
-    setInterval(() => {
+    let myInterval = setInterval(() => {
         getTime();
     }, 1000);
+    setTimeout(() => {
+        clearInterval(myInterval);
+    }, 10000);
 }
