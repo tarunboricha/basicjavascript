@@ -11,6 +11,7 @@ function q1ans() {
         let num1 = document.getElementById('q1num1').value;
         let num2 = document.getElementById('q1num2').value;
         if(num1 == '' || num2 == ''){
+            document.getElementById('q1ans').value = '';
             return;
         }
         let ans = Number(num1) + Number(num2);
