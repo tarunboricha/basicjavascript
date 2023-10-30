@@ -35,9 +35,9 @@ function q3ans() {
                 document.getElementsByClassName('q3ans')[1].innerHTML = num1;
             }
         }
-        else{
+        else {
             document.getElementsByClassName('q3ans')[0].innerHTML = '';
-                document.getElementsByClassName('q3ans')[1].innerHTML = '';
+            document.getElementsByClassName('q3ans')[1].innerHTML = '';
         }
     }, 1);
 }
@@ -100,13 +100,13 @@ function q6ans() {
     }, 1);
 }
 function q7ans() {
-    function getTime(){
+    function getTime() {
         var myDate = new Date();
-        var myDay = myDate.getDay(); 
+        var myDay = myDate.getDay();
         var weekday = ['Sunday', 'Monday', 'Tuesday',
             'Wednesday', 'Thursday', 'Friday', 'Saturday'
         ];
-        
+
         var hours = myDate.getHours();
         var ampm = hours >= 12 ? 'PM' : 'AM';
         hours = hours % 12;
@@ -115,7 +115,7 @@ function q7ans() {
         minutes = minutes < 10 ? '0' + minutes : minutes;
         var myTime = hours + " " + ampm + " : " + minutes +
             " : " + myDate.getSeconds();
-        
+
         var ans = "Today is : " + weekday[myDay] + " and Current time is : " + myTime;
         document.getElementById('q7ans').innerText = ans;
     }
