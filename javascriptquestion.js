@@ -1,10 +1,14 @@
+var currque = '';
 function gotoque(que) {
     document.getElementsByClassName('center')[0].style.display = 'none';
     document.getElementById(que).style.display = 'block';
+    document.getElementsByClassName('backtoque')[0].style.display = 'flex';
+    currque = que;
 }
-function backtoque(que) {
-    document.getElementById(que).style.display = 'none';
+function backtoque() {
+    document.getElementById(currque).style.display = 'none';
     document.getElementsByClassName('center')[0].style.display = 'flex';
+    document.getElementsByClassName('backtoque')[0].style.display = 'none';
 }
 function q1ans() {
     setTimeout(() => {
