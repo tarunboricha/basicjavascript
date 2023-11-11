@@ -87,24 +87,26 @@ function q4ans() {
 function q5ans() {
     setTimeout(() => {
         let name = document.getElementById('q5name').value;
-        let reversename = '';
-        for (let i = (name.length) - 1; i >= 0; i--) {
-            reversename += name[i];
-        }
+        let i = 0, j = name.length - 1;
         if (name == '') {
             document.getElementById('q5ansyes').checked = false;
             document.getElementById('q5ansno').checked = false;
             document.getElementById('q5ans').value = '';
             return;
         }
-        document.getElementById('q5ans').value = reversename;
-        if (name == reversename) {
+        while(i<j){
+            if(name[i++]!=name[j--]){
+                document.getElementById('q5ansno').checked = true;
+                document.getElementById('q5ansyes').checked = false;
+                i = -1;
+                break;
+            }
+        }
+        
+        document.getElementById('q5ans').value = name.split('').reverse().join('');
+        if (i != -1) {
             document.getElementById('q5ansyes').checked = true;
             document.getElementById('q5ansno').checked = false;
-        }
-        else {
-            document.getElementById('q5ansno').checked = true;
-            document.getElementById('q5ansyes').checked = false;
         }
     }, 1);
 }
